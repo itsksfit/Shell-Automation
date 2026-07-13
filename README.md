@@ -1,13 +1,14 @@
 # Shell Automation
 
-A collection of Bash scripts to automate common Linux tasks such as folder backups, file cleanup, disk usage monitoring, and process management.
+A collection of Bash scripts that automate common Linux tasks such as folder backups, temporary file cleanup, disk usage monitoring, and process monitoring.
 
 ## Features
 
-- ✅ Backup folders
+- ✅ Backup a folder
 - ✅ Cleanup temporary (.tmp) files
-- ✅ Check disk usage
-- ⏳ Process Monitor (Coming Soon)
+- ✅ Monitor disk usage
+- ✅ View running processes
+- ✅ Interactive command-line menu
 
 ## Project Structure
 
@@ -15,44 +16,82 @@ A collection of Bash scripts to automate common Linux tasks such as folder backu
 Shell-Automation/
 │
 ├── scripts/
-│   └── backup.sh
+│   ├── backup.sh
+│   ├── cleanup.sh
+│   ├── disk_usage.sh
+│   ├── process_monitor.sh
+│   └── menu.sh
 │
 ├── README.md
 ├── pyproject.toml
 └── .gitignore
 ```
 
-## Current Progress
+## Scripts
 
-### Backup Script
-
-- Accepts a source folder from the user.
+### backup.sh
+- Takes a source folder as input.
 - Validates whether the folder exists.
-- Creates a `backup` directory if it doesn't exist.
-- Copies the source folder recursively into the backup directory.
-- Displays a success message after completion.
+- Creates a timestamp-based backup directory.
+- Copies the folder recursively.
 
-## Technologies Used
+### cleanup.sh
+- Scans a folder for `.tmp` files.
+- Displays matching files.
+- Asks for confirmation before deleting them.
+
+### disk_usage.sh
+- Displays the total disk space used by a directory.
+
+### process_monitor.sh
+- Displays the currently running processes.
+
+### menu.sh
+Provides a simple interactive menu to access all scripts from one place.
+
+## Technologies
 
 - Bash
 - Linux Commands
 - Git & GitHub
 
-## Run
+## Linux Commands Used
 
-Give execute permission:
+- `mkdir`
+- `cp`
+- `find`
+- `rm`
+- `du`
+- `ps`
+- `chmod`
+- `echo`
+- `read`
+- `date`
+
+## How to Run
+
+Give execute permission (first time only):
 
 ```bash
-chmod +x scripts/backup.sh
+chmod +x scripts/*.sh
 ```
 
-Run the script:
+Run the menu:
+
+```bash
+./scripts/menu.sh
+```
+
+Or run any script individually:
 
 ```bash
 ./scripts/backup.sh
+./scripts/cleanup.sh
+./scripts/disk_usage.sh
+./scripts/process_monitor.sh
 ```
 
-## Learning Goals
+## Learning Objectives
 
 This project is being built while learning:
 
@@ -60,16 +99,17 @@ This project is being built while learning:
 - Linux Commands
 - Git & GitHub Workflow
 - Automation
-- Documentation
 - Debugging & Testing
+- Documentation
 
-## Upcoming Features
+## Upcoming Improvements
 
-- Timestamp-based backups
-- File cleanup automation
-- Disk usage reports
-- Process monitoring
-- Interactive menu-driven CLI
+- Better error handling
+- Log file generation
+- Custom backup destination
+- Colored terminal output
+- Backup compression
+- Scheduled automation (Cron)
 
 ## Author
 
