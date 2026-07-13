@@ -1,3 +1,5 @@
+#touch scripts/cleanup.sh
+#chmod +x scripts/cleanup.sh
 #!/bin/bash
 echo "===== Cleanup Script ====="
 read -p "Enter folder path: " FOLDER
