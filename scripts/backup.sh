@@ -11,7 +11,12 @@ if [ ! -d "$SOURCE_FOLDER" ]; then         # -d : check if the folder exists
     exit 1                                 # exit with error code 1, 1 = Error.
 fi                 # fi : end of if statement
 
-BACKUP_FOLDER="backup"
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")           #$(...) : Command ke output ko variable me store karta hai.
+BACKUP_FOLDER="backup_$TIMESTAMP"
 mkdir -p "$BACKUP_FOLDER"    # -p : create the folder if it doesn't exist if it exists, do nothing
 cp -r "$SOURCE_FOLDER" "$BACKUP_FOLDER"   # -r : copy recursively, copy all files and subfolders
-echo "Backup completed successfully!"
+echo "===================================="
+echo " Backup Completed Successfully ✅"
+echo " Source : $SOURCE_FOLDER"
+echo " Backup : $BACKUP_FOLDER"
+echo "===================================="
