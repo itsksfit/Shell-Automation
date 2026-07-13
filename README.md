@@ -5,7 +5,7 @@ A collection of Bash scripts to automate common Linux tasks such as folder backu
 ## Features
 
 - ✅ Backup a folder
-- ⏳ File Cleanup (Coming Soon)
+- ✅ Cleanup temporary (.tmp) files
 - ⏳ Disk Usage Monitor (Coming Soon)
 - ⏳ Process Monitor (Coming Soon)
 
