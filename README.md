@@ -114,5 +114,4 @@ This project is being built while learning:
 ## Author
 
 **Krishna Sharma**
-
 GitHub: https://github.com/itsksfit
